@@ -1,0 +1,27 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.editOldInline{background:#FFE6E6;}.editNewInline{background:#E6FFE6;}
+.top{position:fixed; top:0; left:0; width:100%; height:40px;}
+.table{position:fixed; width: 99.5%; top:41px; height: 93%; overflow-y:scroll}
+.button{text-align:center}.next{width:60px;height:40px;}.prev{width:60px;height:40px;}
+#now {width:60;height:30px;margin-left:40px;}
+.all{width:60px;height:30px;}
+.go{width:60px;height:40px;margin-left:30px;}</style></head><body><div class="top"><div class="button"><button class="next">next</button><button class="prev">prev</button><input type="text" id="now" value="0"><span>/</span><span id="all"></span><button class="go">go</button></div></div><div class="table"><table width="98%" border="0" cellpadding="2" cellspacing="1" style="table-layout:fixed;word-break:break-all; word-wrap:break-all;"><tr><th width="45%" style="font-weight:bold;text-align:center;font-size:35px;color:red">Input</th><th width="45%" style="font-weight:bold;text-align:center;font-size:35px;color:red">Output</th></tr><tr><td>166.  <ins class="diff1" STYLE="background:#FFE6E6;">&lt;ref:key-value value="0065-"&gt;</ins></td><td>166.  <ins STYLE="background:#E6FFE6;">&lt;ref:key-value value="0065-VIC_ACT_2004-99_LEG_INFO"&gt;</ins></td></tr></table></div><script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script type="text/javascript">
+jQuery(document).ready(function($){
+$('.next').click(function(){var container = $('.table');
+var index = document.getElementById('now').getAttribute('value');
+index = parseInt(index) + 1;var scrollTo = $('.diff' + index);if(scrollTo.length > 0)
+{container.animate({scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()});
+document.getElementById('now').setAttribute('value', index + '');$('#now').val(index + '');}});
+$('.prev').click(function(){var container = $('.table');
+var index = document.getElementById('now').getAttribute('value');
+index = parseInt(index) - 1;var scrollTo = $('.diff' + index);
+if(scrollTo.length > 0){container.animate({
+scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()});
+document.getElementById('now').setAttribute('value', index + '');$('#now').val(index + '');}});
+document.getElementById("all").innerText = $("*[class^='diff']").length;
+$('.go').click(function(){var container = $('.table');
+var index = document.getElementById('now').value;
+index = parseInt(index);var scrollTo = $('.diff' + index);
+if(scrollTo.length > 0){container.animate({
+scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()});
+document.getElementById('now').setAttribute('value', index + '');}});
+});</script></body></html>
