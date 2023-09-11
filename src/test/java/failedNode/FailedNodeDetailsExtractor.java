@@ -20,7 +20,7 @@ public class FailedNodeDetailsExtractor {
 	private static List<String[]> failedElementsWithDiffType;
 
 	public static void main(String[] args) throws XPathExpressionException, IOException {
-		
+		System.out.println("Job is started......");		
 		 List<String> filePaths = new ArrayList<>();
 	     failedElements = new HashSet<String>();
 	     failedElementsWithDiffType = new ArrayList<String[]>();
