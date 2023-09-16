@@ -39,7 +39,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
+						<!--	<classpathPrefix>lib/</classpathPrefix> -->
 							<mainClass>FailedNodeDetailsExtractor</mainClass>
 						</manifest>
 					</archive>
