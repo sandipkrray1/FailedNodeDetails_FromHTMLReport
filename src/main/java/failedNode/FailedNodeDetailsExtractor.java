@@ -21,6 +21,7 @@ public class FailedNodeDetailsExtractor {
 
 	public static void main(String[] args) throws XPathExpressionException, IOException {
 		System.out.println("Job is started now......");		
+		System.out.println("Job is started again......");		
 		 List<String> filePaths = new ArrayList<>();
 	     failedElements = new HashSet<String>();
 	     failedElementsWithDiffType = new ArrayList<String[]>();
